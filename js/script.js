@@ -10,7 +10,7 @@ textInput.addEventListener('keydown', e => {
         console.log('Input is empty or a key other than Enter button was pressed.');
         return;
     }else{
-        console.log('There is no error');
+        console.log('There is no error.');
     }
     const li = document.createElement('li');
     const span = document.createElement('span');

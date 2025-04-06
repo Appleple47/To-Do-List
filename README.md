@@ -8,6 +8,7 @@ On my website, you can manage what you have to do.
 Input your task and press Enter button, and it will keep your task. 
 
 ## Future Plans
+・Make it so that your own list is saved even after re-entering the site\
 ・Add an edit button\
 ・Enable task sorting\
 ・Decorate the webpage\
