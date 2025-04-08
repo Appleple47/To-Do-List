@@ -14,8 +14,12 @@ textInput.addEventListener('keydown', e => {
     }
     const li = document.createElement('li');
     const span = document.createElement('span');
-    const button = document.createElement('button');
-    button.addEventListener('click', e => {
+    const div = document.createElement('div');
+    const deletebutton = document.createElement('button');
+    const editbutton = document.createElement('button');
+    const divfin = document.createElement('\div');
+
+    deletebutton.addEventListener('click', e => {
         todoList.removeChild(e.target.closest('li'));
     });
 
@@ -23,12 +27,25 @@ textInput.addEventListener('keydown', e => {
     span.textContent = text;
     span.classList.add('todo-text');
 
-    button.textContent = 'delete';
-    button.type = 'button';
-    button.classList.add('delete-button');
+    div.type = 'div';
+    div.classList.add('buttongroup');
+
+    
+    editbutton.textContent = 'edit';
+    editbutton.type = 'button';
+    editbutton.classList.add('edit-button');
+    
+    deletebutton.textContent = 'delete';
+    deletebutton.type = 'button';
+    deletebutton.classList.add('delete-button');
+
+    divfin.type = '\div';
 
     li.appendChild(span);
-    li.appendChild(button);
+    li.appendChild(div);
+    li.appendChild(editbutton);
+    li.appendChild(deletebutton);
+    li.appendChild(divfin);
     todoList.appendChild(li);
 
     textInput.value = "";

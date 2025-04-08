@@ -41,8 +41,23 @@ html {
     font-weight: bold;
     color: crimson;
 }
+.edit-button{
+    border-width: 2px;
+    border-radius: 1rem;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    color: crimson;
+    margin-right: 10px;
+}
 
-.delete-button:hover{
+.delete-button:hover
+.edit-button:hover{
     color: brown;
     border-color: grey;
 }
+.buttongroup {
+    display: flex;
+    margin-left: auto;
+  }
