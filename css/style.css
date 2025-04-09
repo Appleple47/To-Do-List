@@ -52,7 +52,7 @@ html {
     margin-right: 10px;
 }
 
-.delete-button:hover
+.delete-button:hover, 
 .edit-button:hover{
     color: brown;
     border-color: grey;
