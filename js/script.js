@@ -17,20 +17,21 @@ textInput.addEventListener('keydown', e => {
     const div = document.createElement('div');
     const deletebutton = document.createElement('button');
     const editbutton = document.createElement('button');
-    const divfin = document.createElement('\div');
 
     deletebutton.addEventListener('click', e => {
         todoList.removeChild(e.target.closest('li'));
     });
 
     li.classList.add('list-item');
+
+    li.classList.add('list-item');
+    li.setAttribute('draggable', 'true');
+
     span.textContent = text;
     span.classList.add('todo-text');
 
-    div.type = 'div';
     div.classList.add('buttongroup');
 
-    
     editbutton.textContent = 'edit';
     editbutton.type = 'button';
     editbutton.classList.add('edit-button');
@@ -39,15 +40,27 @@ textInput.addEventListener('keydown', e => {
     deletebutton.type = 'button';
     deletebutton.classList.add('delete-button');
 
-    divfin.type = '\div';
-
     li.appendChild(span);
     li.appendChild(div);
     li.appendChild(editbutton);
     li.appendChild(deletebutton);
-    li.appendChild(divfin);
     todoList.appendChild(li);
-
     textInput.value = "";
 });
 
+let draggedItem = null;
+
+todoList.addEventListener('dragstart', (event) => {
+    draggedItem = event.target;
+});
+
+todoList.addEventListener('dragover', (event) => {
+    event.preventDefault();
+});
+
+todoList.addEventListener('drop', (event) => {
+    event.preventDefault();
+    if (event.target.classList.contains('list-item')) {
+        todoList.insertBefore(draggedItem, event.target.nextSibling);
+    }
+});
