@@ -21,8 +21,28 @@ textInput.addEventListener('keydown', e => {
     deletebutton.addEventListener('click', e => {
         todoList.removeChild(e.target.closest('li'));
     });
-
-    li.classList.add('list-item');
+    
+    editbutton.addEventListener('click', e => {
+        const listItem = e.target.closest('li');
+        const span = listItem.querySelector('.todo-text');
+        const currentText = span.textContent;
+        const input = document.createElement('input');
+        
+        input.type = 'text';
+        input.value = currentText;
+        input.classList.add('edit-input');
+        listItem.replaceChild(input, span);
+        
+        input.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+                const newText = input.value.trim();
+                const newSpan = document.createElement('span');
+                newSpan.textContent = newText || currentText;
+                newSpan.classList.add('todo-text');
+                listItem.replaceChild(newSpan, input);
+            }
+        });
+    });
 
     li.classList.add('list-item');
     li.setAttribute('draggable', 'true');
