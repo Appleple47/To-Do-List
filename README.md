@@ -5,7 +5,7 @@ Click [here](https://appleple47.github.io/To-Do-List/) to visit my website and m
 On my website, you can manage what you have to do.
 
 ## How to use 
-Input your task and press Enter button, and it will keep your task. 
+Input your task in the textbox and press Enter button, and it will keep your task. 
 
 ## Future Plans
 ・Make it so that your own list is saved even after re-entering the site\
