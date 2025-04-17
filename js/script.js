@@ -72,6 +72,8 @@ let draggedItem = null;
 
 todoList.addEventListener('dragstart', (event) => {
     draggedItem = event.target;
+    draggedItem.classList.add('dragging');
+
 });
 
 todoList.addEventListener('dragover', (event) => {
@@ -83,4 +85,5 @@ todoList.addEventListener('drop', (event) => {
     if (event.target.classList.contains('list-item')) {
         todoList.insertBefore(draggedItem, event.target.nextSibling);
     }
+    draggedItem.classList.remove('dragging');
 });

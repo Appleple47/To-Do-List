@@ -21,7 +21,6 @@ html {
     margin: 0;
     padding: 0;
 }
-
 .list-item{
     list-style: none;
     display: flex;
@@ -57,7 +56,10 @@ html {
     color: brown;
     border-color: grey;
 }
+.dragging {
+    background-color: aliceblue;
+}
 .buttongroup {
     display: flex;
     margin-left: auto;
-  }
+}
