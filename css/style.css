@@ -39,25 +39,25 @@ html {
     border-width: 2px;
     border-radius: 1rem;
     outline: none;
-    background-color: transparent;
+    background-color: crimson;
     font-size: 1rem;
     font-weight: bold;
-    color: crimson;
+    color: white;
 }
 .edit-button{
     border-width: 2px;
     border-radius: 1rem;
     outline: none;
-    background-color: transparent;
+    background-color:skyblue;
     font-size: 1rem;
     font-weight: bold;
-    color: crimson;
     margin-right: 10px;
+    color: white;
 }
 
 .delete-button:hover, 
 .edit-button:hover{
-    color: brown;
+    color: black;
     border-color: grey;
 }
 .dragging {
