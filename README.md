@@ -10,7 +10,8 @@ Input your task in the textbox and press Enter button, and it will keep your tas
 ## Future Plans
 ・Make it so that your own list is saved even after re-entering the site\
 ・Decorate the webpage\
-・Add "Completed Tasks" section where users can review what they have accomplished.\
+・Add "Completed Tasks" section where users can review what they have accomplished\
+・Improve UIof the website\
   etc.
 
 ## Completed Tasks
